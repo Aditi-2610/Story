@@ -1,0 +1,149 @@
+ mkdir Story
+
+abc@DESKTOP-83I580G MINGW64 ~/onedrive/desktop$ cd Storyabc@DESKTOP-83I580G MINGW64 ~/onedrive/desktop/Story
+$ ls
+
+abc@DESKTOP-83I580G MINGW64 ~/onedrive/desktop/Story
+$ touch chapter1.txt
+
+abc@DESKTOP-83I580G MINGW64 ~/onedrive/desktop/Story
+$ atom .
+
+
+abc@DESKTOP-83I580G MINGW64 ~/onedrive/desktop/Story
+$ git init
+Initialized empty Git repository in C:/Users/abc/OneDrive/Desktop/Story/.git/
+
+abc@DESKTOP-83I580G MINGW64 ~/onedrive/desktop/Story (master)
+$ ls -a
+./  ../  .git/  chapter1.txt
+
+abc@DESKTOP-83I580G MINGW64 ~/onedrive/desktop/Story (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        chapter1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)       
+
+abc@DESKTOP-83I580G MINGW64 ~/onedrive/desktop/Story (master)
+$ git add chapter1.txt
+
+abc@DESKTOP-83I580G MINGW64 ~/onedrive/desktop/Story (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   chapter1.txt
+
+
+abc@DESKTOP-83I580G MINGW64 ~/onedrive/desktop/Story (master)
+$ git commit -m "completed chapter 1"
+[master (root-commit) dd0fabe] completed chapter 1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 chapter1.txt
+
+abc@DESKTOP-83I580G MINGW64 ~/onedrive/desktop/Story (master)
+$ git log
+commit dd0fabe0a6d557796b7cc0d4f49f95310b79c4b2 (HEAD -> master)
+Author: Aditi Limkar <aditilimkar26@gmail.com>
+Date:   Sun May 10 13:39:02 2020 +0530
+
+    completed chapter 1
+
+abc@DESKTOP-83I580G MINGW64 ~/onedrive/desktop/Story (master)
+$ touch chapter2.txt chapter3.txt
+
+abc@DESKTOP-83I580G MINGW64 ~/onedrive/desktop/Story (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        chapter2.txt
+        chapter3.txt
+
+nothing added to commit but untracked files present (use "git add" to track)       
+
+abc@DESKTOP-83I580G MINGW64 ~/onedrive/desktop/Story (master)
+$ git add .
+
+abc@DESKTOP-83I580G MINGW64 ~/onedrive/desktop/Story (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   chapter2.txt
+        new file:   chapter3.txt
+
+
+abc@DESKTOP-83I580G MINGW64 ~/onedrive/desktop/Story (master)
+$ git commit -m "Complete chapter 2 and 3"
+[master 9dc08ee] Complete chapter 2 and 3
+ 2 files changed, 2 insertions(+)
+ create mode 100644 chapter2.txt
+ create mode 100644 chapter3.txt
+
+abc@DESKTOP-83I580G MINGW64 ~/onedrive/desktop/Story (master)
+$ git log
+commit 9dc08ee36e24fa83285c8fde6ef3a6f0345d76ee (HEAD -> master)
+Author: Aditi Limkar <aditilimkar26@gmail.com>
+Date:   Sun May 10 13:43:23 2020 +0530
+
+    Complete chapter 2 and 3
+
+commit dd0fabe0a6d557796b7cc0d4f49f95310b79c4b2
+Author: Aditi Limkar <aditilimkar26@gmail.com>
+Date:   Sun May 10 13:39:02 2020 +0530
+
+    completed chapter 1
+
+abc@DESKTOP-83I580G MINGW64 ~/onedrive/desktop/Story (master)
+$ git diff chapter3.txt
+
+abc@DESKTOP-83I580G MINGW64 ~/onedrive/desktop/Story (master)
+$ git checkuot chapter3.txt
+git: 'checkuot' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+
+abc@DESKTOP-83I580G MINGW64 ~/onedrive/desktop/Story (master)
+$ git checkout chapter3.txt
+Updated 0 paths from the index
+
+abc@DESKTOP-83I580G MINGW64 ~/onedrive/desktop/Story (master)
+$ git log
+commit 9dc08ee36e24fa83285c8fde6ef3a6f0345d76ee (HEAD -> master)
+Author: Aditi Limkar <aditilimkar26@gmail.com>
+Date:   Sun May 10 13:43:23 2020 +0530
+
+    Complete chapter 2 and 3
+
+commit dd0fabe0a6d557796b7cc0d4f49f95310b79c4b2
+Author: Aditi Limkar <aditilimkar26@gmail.com>
+Date:   Sun May 10 13:39:02 2020 +0530
+
+    completed chapter 1
+
+abc@DESKTOP-83I580G MINGW64 ~/onedrive/desktop/Story (master)
+$ git remote add origin https://github.com/Aditi-2610/Story.git
+
+abc@DESKTOP-83I580G MINGW64 ~/onedrive/desktop/Story (master)
+$ git push -u origin master
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (7/7), 640 bytes | 128.00 KiB/s, done.
+Total 7 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Aditi-2610/Story.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
